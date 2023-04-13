@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <title>FATE Condensed Character Sheet</title>
+</head>
+<body>
+  <div class="container">
+    <h1>FATE Condensed Character Sheet</h1>
+
+    <div class="top-info">
+      <div class="basic-info">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <label for="pronouns">Pronouns:</label>
+        <input type="text" id="pronouns" name="pronouns">
+        <label for="refresh">Refresh:</label>
+        <input type="text" id="refresh" name="refresh">
+      </div>
+      <div class="portrait-info">
+        <label for="image-url">Image URL:</label>
+        <input type="text" id="image-url" name="image-url">
+        <img id="portrait" src="" alt="Character Portrait" />
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Aspects</h2>
+      <textarea id="aspects" name="aspects" rows="5"></textarea>
+    </div>
+
+    <div class="section">
+      <h2>Vitals</h2>
+      <div class="stress">
+        <label>Physical Stress:</label>
+        <div class="checkbox-container" id="physicalStress"></div>
+        <br />
+        <button type="button" class="add-btn" onclick="addStressBox('physicalStress')">+</button>
+        <button type="button" class="remove-btn" onclick="removeStressBox('physicalStress')">-</button>
+      </div>
+      <div class="stress">
+        <label>Mental Stress:</label>
+        <div class="checkbox-container" id="mentalStress"></div>
+        <br />
+        <button type="button" class="add-btn" onclick="addStressBox('mentalStress')">+</button>
+        <button type="button" class="remove-btn" onclick="removeStressBox('mentalStress')">-</button>
+      </div>
+      <div class="consequences">
+        <label>Consequences:</label>
+        <div class="consequence">
+          <input type="checkbox" id="consequence1" value="2">
+          <label for="consequence1" class="checkbox-number">2</label>
+          <input type="text" id="mild" placeholder="Mild">
+        </div>
+        <div class="consequence">
+          <input type="checkbox" id="consequence2" value="4">
+          <label for="consequence2" class="checkbox-number">4</label>
+          <input type="text" id="moderate" placeholder="Moderate">
+        </div>
+        <div class="consequence">
+          <input type="checkbox" id="consequence3" value="6">
+          <label for="consequence3" class="checkbox-number">6</label>
+          <input type="text" id="severe" placeholder="Severe">
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <table class="skills-grid">
+        <tr>
+          <td class="label">Superb</td>
+          <td><input type="text" class="skill-input"></td>
+          <td><input type="text" class="skill-input"></td>
+          <td><input type="text" class="skill-input"></td>
+          <td><input type="text" class="skill-input"></td>
+          <td><input type="text" class="skill-input"></td>
+        </tr>
+        <tr>
+          <td class="label">Great</td>
+          <td><input type="text" class="skill-input"></td>
+          <td><input type="text" class="skill-input"></td>
+          <td><input type="text" class="skill-input"></td>
+          <td><input type="text" class="skill-input"></td>
+          <td><input type="text" class="skill-input"></td>
+        </tr>
+        <tr>
+          <td class="label">Good</td>
+          <td><input type="text" class="skill-input"></td>
+          <td><input type="text" class="skill-input"></td>
+          <td><input type="text" class="skill-input"></td>
+          <td><input type="text" class="skill-input"></td>
+          <td><input type="text" class="skill-input"></td>
+        </tr>
+        <tr>
+          <td class="label">Fair</td>
+          <td><input type="text" class="skill-input"></td>
+          <td><input type="text" class="skill-input"></td>
+          <td><input type="text" class="skill-input"></td>
+          <td><input type="text" class="skill-input"></td>
+          <td><input type="text" class="skill-input"></td>
+        </tr>
+        <tr>
+          <td class="label">Average</td>
+          <td><input type="text" class="skill-input"></td>
+          <td><input type="text" class="skill-input"></td>
+          <td><input type="text" class="skill-input"></td>
+          <td><input type="text" class="skill-input"></td>
+          <td><input type="text" class="skill-input"></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>Stunts</h2>
+      <textarea id="stunts" name="stunts" rows="10"></textarea>
+    </div>
+  </div>
+</body>
+</html>
