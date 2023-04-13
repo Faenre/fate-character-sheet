@@ -71,7 +71,7 @@ ul li:nth-child(even) {
 .checkbox-container {
   display: inline-flex;
   flex-wrap: wrap;
-  width: 150px;
+  width: 180px;
   margin-left: 0;
   vertical-align: middle;
   text-align: left;

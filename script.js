@@ -1,7 +1,7 @@
 function addStressBox(id) {
   const container = document.getElementById(id);
 
-  if (container.children.length < 10) {
+  if (container.children.length < 12) {
     const input = document.createElement("input");
     const label = document.createElement("label");
     const uniqueId = `${id}_${container.children.length}`;
